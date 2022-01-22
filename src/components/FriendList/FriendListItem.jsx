@@ -1,6 +1,6 @@
 import { AcsentText } from 'components/Profile/Profile.styled';
 import PropTypes from 'prop-types'
-import { Friends, Status,Avatar } from './FriendListItem.styled';
+import { Friends, Status, Avatar } from 'components/FriendList/FriendListItem.styled';
 export default function  FriendListItem ({avatar,name,isOnline}) {
   return (
     <Friends>

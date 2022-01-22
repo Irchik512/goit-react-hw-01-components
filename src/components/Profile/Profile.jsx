@@ -6,7 +6,7 @@ import {
   AcsentText,
   UserStats,
   UserStatsItems,
-} from "./Profile.styled";
+} from "components/Profile/Profile.styled";
 
 export default function Profile({
   avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
@@ -42,10 +42,10 @@ export default function Profile({
         </UserStatsItems>
       </UserStats>
     </ProfileCard>
-  );
-}
+  )
+};
 
-Profile.ppropTypes = {
+Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,

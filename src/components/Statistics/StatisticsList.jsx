@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types'
-
+ import { StatsList, StatsItem, Text } from './StatisticsList.styled';
+ ;
+ 
 export default function StatisticsList({stats}) {
   return (
-  <ul className="stat-list">
+  <StatsList >
     {
       stats.map((stat) => {
         return(
-          <li className="item" key = {stat.id}>
-          <span className="label">{stat.label}</span>
-          <span className="percentage">{stat.percentage}</span>
-          </li>
+          <StatsItem key = {stat.id}>
+          <span>{stat.label}</span>
+          <Text>{stat.percentage}%</Text>
+          </StatsItem>
         )
       })
     }
-  </ul>
+  </StatsList>
   )
 };
 
@@ -22,5 +24,5 @@ StatisticsList.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-  })),
+  })),  
 };

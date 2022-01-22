@@ -1,13 +1,13 @@
-import Profile from '../Profile/Profile'
-import data from 'user.json'
-import FriendList from '../FriendList/FriendList';
-import friendsData from 'friend-list.json'
-import Statistics from '../Statistics/Statistics'
-import StatisticsList from '../Statistics/StatisticsList'
-import statisticsData from 'dataStatistics.json';
-import transactions from 'transactions.json';
-import TransactionHistory from "components/TransactionHistory/TransactionHistory";
 import { Container } from './App.styled';
+import Profile from 'components/Profile/Profile'
+import FriendList from 'components/FriendList/FriendList';
+import Statistics from 'components/Statistics/Statistics'
+import StatisticsList from 'components/Statistics/StatisticsList'
+import TransactionHistory from "components/TransactionHistory/TransactionHistory";
+import data from 'data/user.json'
+import friendsData from 'data/friend-list.json'
+import statisticsData from 'data/dataStatistics.json';
+import transactions from 'data/transactions.json';
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
     friends = {friendsData}
     />
     <Statistics title = "Upload stats" >
-      <StatisticsList stats={statisticsData} />
+      <StatisticsList stats={statisticsData}/>
     </Statistics>
     <TransactionHistory items = {transactions} />
   </Container>
